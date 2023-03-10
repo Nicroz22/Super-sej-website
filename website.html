@@ -1,0 +1,61 @@
+<html>
+<head>
+ 
+<link rel="shortcut icon" href="./blue.png" />
+    <title>Super sej website</title>
+<style>
+button {
+    background: transparent;
+    border-color: #640191;
+}
+body {
+    background-image: url("https://www.adorama.com/alc/wp-content/uploads/2021/05/bird-wings-flying-feature.gif");
+    background-size: cover;
+}
+
+.stor {
+    font-size: 128px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items:center;
+}
+</style>
+</head>
+<body id="bg">
+
+<div class="flex">
+   <button id="knap" class="stor blue">Do not press</button>
+</div>
+<script>
+    document.getElementById("knap").onclick = function() {
+        document.getElementById("bg").style.backgroundImage ="url('https://media.tenor.com/o656qFKDzeUAAAAC/rick-astley-never-gonna-give-you-up.gif')";
+        document.getElementsByTagName("title")[0].innerHTML = "RickRolled";
+        document.getElementById("knap").style.visibility = "hidden";
+        for (let i=0; i<3; i++){
+            setTimeout(function(){
+                console.log(i);
+                var audio = new Audio('rr.mp4');
+                audio.play();
+            }, 500*i);
+        }
+    }
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
